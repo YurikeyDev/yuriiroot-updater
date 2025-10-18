@@ -1,11 +1,4 @@
-# ==============================================================================
-# CEPHANELİK UPDATER - v7.0 - TEK İŞLEYİCİLİ NİHAİ WORKFLOW
-# ==============================================================================
-# AÇIKLAMA: Bu versiyon, projenin tüm mantığını tek bir Python betiğinde
-# (`main_automation.py`) çalıştırır. Maksimum sadelik, okunabilirlik ve
-# sağlamlık sunar.
-
-name: CPUpdater Otomasyon
+name: YURIUpdater Automation
 on:
   schedule:
     - cron: '0 * * * *'
@@ -23,15 +16,15 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Python Ortamını Kur
+      - name: Set Up Python Environment
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
 
-      - name: Gerekli Kütüphaneleri Yükle
+      - name: Load Required Libraries
         run: pip install telethon requests
 
-      - name: Modülleri İndir ve Telegram'da Yayınla
+      - name: Download Modules and Publish on Telegram
         run: python main_automation.py
         env:
           TELEGRAM_API_ID: ${{ secrets.TELEGRAM_API_ID }}
@@ -39,17 +32,17 @@ jobs:
           TELEGRAM_SESSION_STRING: ${{ secrets.TELEGRAM_SESSION_STRING }}
           GIT_API_TOKEN: ${{ secrets.GIT_API_TOKEN }}
 
-      - name: Durum Dosyalarını Depoya Kaydet
+      - name: Save Status Files to Storage
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
 
           if [[ -n $(git status --porcelain state) ]]; then
-            echo "[INFO] State.json değişiklikler bulundu, depoya kaydediliyor."
+            echo "[INFO] State.json changes have been found, they are being saved in the repository."
             git add state/
-            git commit -m "[CI]: State.json güncellendi"
+            git commit -m "[CI]: State.json updated"
             git pull --rebase
             git push
           else
-            echo "[INFO] Yeni değişiklik bulunamadı."
+            echo "[INFO] No new changes found."
           fi

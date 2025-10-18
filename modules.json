@@ -1,12 +1,12 @@
 {
   "modules": [
     {
-      "name": "TrickyStore",
+      "name": "ZygiskNext",
       "enabled": true,
       "type": "github_release",
-      "source": "5ec1cff/TrickyStore",
+      "source": "Dr-TSNG/ZygiskNext",
       "asset_filter": "\\.zip$",
-	  "description": "TrickyStore"
+      "description": "Dr-TSNG/ZygiskNext [Modules]"
     },
     {
       "name": "pif_ci",
@@ -25,12 +25,28 @@
       "description": "KOWX712/PlayIntegrityFix (inject_s) (release) [Modules]"
     },
     {
-      "name": "ZygiskNext",
+      "name": "susfs_ci",
+      "enabled": true,
+      "type": "github_ci",
+      "source": "https://nightly.link/sidex15/susfs4ksu-module/workflows/build.yml/v1.5.2+_R21",
+      "asset_filter": "\\.zip$",
+      "description": "sidex15/susfs4ksu-module (nightly) [Modules]"
+    },
+    {
+      "name": "susfs_release",
       "enabled": true,
       "type": "github_release",
-      "source": "Dr-TSNG/ZygiskNext",
+      "source": "sidex15/susfs4ksu-module",
       "asset_filter": "\\.zip$",
-      "description": "Dr-TSNG/ZygiskNext"
+      "description": "sidex15/susfs4ksu-module (release) [Modules]"
+    },
+    {
+      "name": "TrickyStore",
+      "enabled": true,
+      "type": "github_release",
+      "source": "5ec1cff/TrickyStore",
+      "asset_filter": "\\.zip$",
+	  "description": "5ec1cff/TrickyStore [Modules]"
     },
     {
       "name": "taddon_ci",
@@ -49,68 +65,20 @@
       "description": "KOWX712/Tricky-Addon (release) [Modules]"
     },
     {
-      "name": "viper",
+      "name": "yurikey",
       "enabled": true,
       "type": "github_release",
-      "source": "WSTxda/ViPERFX_RE",
+      "source": "YurikeyDev/yurikey",
       "asset_filter": "\\.zip$",
-      "description": "WSTxda/ViPERFX_RE"
+      "description": "YurikeyDev/yurikey [Modules]"
     },
     {
-      "name": "bindh",
-      "enabled": true,
-      "type": "github_ci",
-      "source": "https://nightly.link/bindhosts/bindhosts/workflows/release.yml/master",
-      "asset_filter": "\\.zip$",
-      "description": "bindhosts"
-    },
-    {
-      "name": "susfs_ci",
-      "enabled": true,
-      "type": "github_ci",
-      "source": "https://nightly.link/sidex15/susfs4ksu-module/workflows/build.yml/v1.5.2+_R21",
-      "asset_filter": "\\.zip$",
-      "description": "sidex15/susfs4ksu-module (nightly) [Modules]"
-    },
-    {
-      "name": "susfs_release",
+      "name": "nohello",
       "enabled": true,
       "type": "github_release",
-      "source": "sidex15/susfs4ksu-module",
-      "asset_filter": "\\.zip$",
-      "description": "sidex15/susfs4ksu-module (release) [Modules]"
-    },
-    {
-      "name": "lsposed",
-      "enabled": true,
-      "type": "github_ci",
-      "source": "https://nightly.link/JingMatrix/LSPosed/workflows/core.yml/master",
-      "asset_filter": "\\.zip$",
-      "description": "JingMatrix/LSPosed"
-    },
-    {
-      "name": "trm",
-      "enabled": true,
-      "type": "github_release",
-      "source": "rompelhd/TermuxRootMods",
-      "asset_filter": "\\.zip$",
-      "description": "rompelhd/TermuxRootMods"
-    },
-    {
-      "name": "ReLSPosed",
-      "enabled": true,
-      "type": "github_ci",
-      "source": "https://nightly.link/ThePedroo/ReLSPosed/workflows/core.yml/master",
-      "asset_filter": "\\.zip$",
-      "description": "ThePedroo/ReLSPosed"
-    },
-    {
-      "name": "GPhotosUnlimited",
-      "enabled": true,
-      "type": "gitlab_release",
-      "source": "cuynu/gphotos-unlimited-zygisk",
-      "asset_filter": "\\.zip$",
-      "description": "cuynu/gphotos-unlimited-zygisk"
+      "source": "MhmRdd/NoHello",
+      "asset_filter": "release\\.zip$",
+      "description": "MhmRdd/NoHello [Modules]"
     },
     {
       "name": "hma_ci",
@@ -129,36 +97,20 @@
       "description": "frknkrc44/HMA-OSS (release) [Unzip for Apk]"
     },
     {
-      "name": "rezygisk",
+      "name": "rezygisk_ci",
       "enabled": true,
       "type": "github_ci",
       "source": "https://nightly.link/PerformanC/ReZygisk/workflows/trusted_ci.yml/main",
       "asset_filter": "release\\.zip$",
-      "description": "PerformanC/ReZygisk"
+      "description": "PerformanC/ReZygisk (nightly) [Modules]"
     },
     {
-      "name": "Zygisk-Assistant",
+      "name": "rezygisk_release",
       "enabled": true,
       "type": "github_release",
-      "source": "snake-4/Zygisk-Assistant",
-      "asset_filter": "release\\.zip$",
-      "description": "Zygisk-Assistant"
-    },
-    {
-      "name": "nohello",
-      "enabled": true,
-      "type": "github_release",
-      "source": "MhmRdd/NoHello",
-      "asset_filter": "release\\.zip$",
-      "description": "MhmRdd/NoHello"
-    },
-    {
-      "name": "yurikey",
-      "enabled": true,
-      "type": "github_release",
-      "source": "YurikeyDev/yurikey",
+      "source": "PerformanC/ReZygisk",
       "asset_filter": "\\.zip$",
-      "description": "YurikeyDev/yurikey"
+      "description": "PerformanC/ReZygisk (release) [Modules]"
     },
     {
       "name": "reveny",
@@ -166,7 +118,7 @@
       "type": "github_release",
       "source": "reveny/Android-Native-Root-Detector",
       "asset_filter": "\\.apk$",
-      "description": "Native Root Detector"
+      "description": "Native Root Detector [Unzip for Apk]"
     },
     {
       "name": "shamiko",
@@ -174,24 +126,7 @@
       "type": "github_release",
       "source": "LSPosed/LSPosed.github.io",
       "asset_filter": "\\.zip$",
-      "description": "Shamiko"
-    },
-    {
-      "name": "magiskalpha",
-      "enabled": true,
-      "type": "telegram_forwarder",
-      "source": "app-release",
-      "asset_filter": "",
-      "source_channel": "magiskalpha",
-      "description": "magiskalpha"
-    },
-    {
-      "name": "Encore",
-      "enabled": true,
-      "type": "github_release",
-      "source": "Rem01Gaming/encore",
-      "asset_filter": "release\\.zip$",
-      "description": "Encore Tweaks"
+      "description": "Shamiko [Modules]"
     }
   ]
 }
